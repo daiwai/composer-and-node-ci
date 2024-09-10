@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         tag: [php8, php8-deployer7, php7.4, php7.1]
-        image: [carlosalgms/composer-and-node-ci]
+        image: [realvoll/composer-and-node-ci]
         latest: [php8]
         include:
           - tag: php8

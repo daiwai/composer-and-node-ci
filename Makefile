@@ -1,4 +1,4 @@
-IMAGE=volldigital/composer-and-node-ci
+IMAGE=realvoll/composer-and-node-ci
 TARGET=Dockerfile
 
 build_8:
