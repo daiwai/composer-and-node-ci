@@ -21,7 +21,7 @@ jobs:
 
           - tag: php8-deployer7
             buildArgs: |
-              DEPLOYER_VERSION=v7.0.0
+              DEPLOYER_VERSION=v7.4.0
 
           - tag: php7.4
             buildArgs: |
