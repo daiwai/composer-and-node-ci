@@ -4,6 +4,7 @@ on:
     branches:
       - master
       - main
+      - deployer-7
   workflow_dispatch:
 
 jobs:
@@ -11,12 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        tag: [php8, php7.4, php7.1]
+        tag: [php8, php8-deployer7, php7.4, php7.1]
         image: [carlosalgms/composer-and-node-ci]
         latest: [php8]
         include:
           - tag: php8
             buildArgs: ""
+
+          - tag: php8-deployer7
+            buildArgs: |
+              DEPLOYER_VERSION=v7.0.0
 
           - tag: php7.4
             buildArgs: |

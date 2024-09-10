@@ -1,4 +1,4 @@
-IMAGE=carlosalgms/composer-and-node-ci
+IMAGE=volldigital/composer-and-node-ci
 TARGET=Dockerfile
 
 build_8:
@@ -8,6 +8,13 @@ build_8:
 		-f $(TARGET) \
 		-t $(IMAGE):latest \
 		-t $(IMAGE):php8
+
+build_8_deployer_7:
+	docker buildx build --rm . \
+		--load \
+		-f $(TARGET) \
+		--build-arg=DEPLOYER_VERSION="v7.4.0" \
+		-t $(IMAGE):php8-deployer7
 
 build_74:
 	docker buildx build --rm . \
